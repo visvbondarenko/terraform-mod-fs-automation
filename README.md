@@ -8,14 +8,6 @@ This module will create AWS EC2 instances/Networking infrastructure for automati
 
 To use the module add it as a source to the enviromnent repository.
 
-
-### Prerequisites
-
-
-```
-Give examples
-```
-
 ### Deployment
 
 Module will be used in Fundational Services environments on Dev/QA/Production accounts.
