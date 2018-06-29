@@ -103,7 +103,7 @@ resource "aws_security_group_rule" "tools_ssh" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-resource "aws_security_group_rule" "jenkins_egress" {
+resource "aws_security_group_rule" "tools_egress" {
   security_group_id = "${aws_security_group.jenkins.id}"
   from_port         = 0
   to_port           = 0

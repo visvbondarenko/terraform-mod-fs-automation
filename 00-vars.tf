@@ -26,7 +26,6 @@ variable "ebs_volume_jenkins_docker_size" {default = 30}
 variable "instance_tools_count"         {default = 1}
 variable "instance_tools_type"          {default = "t2.micro"}
 variable "instance_tools_ebs_optimized" {default = true}
-variable "instance_tools_private_ip"    {type = "map"}
 variable "instance_tools_sgs"           {type = "list" default = []}
 variable "subtype_tools"                {default = "tools"}
 
