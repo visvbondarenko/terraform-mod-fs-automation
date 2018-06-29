@@ -5,7 +5,7 @@ variable "mgmt" {default = "Terraform"}
 
 variable "type"     {default = "automation"}
 variable "region"   {}
-variable "azs"      {type = "map"}
+variable "azs"      {type = "list"}
 variable "vpc_id"   {}
 variable "vpc_cidr" {}
 variable "ebs_volume_type" {default = "gp2"}
