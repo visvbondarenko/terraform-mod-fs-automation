@@ -17,5 +17,5 @@ resource "aws_efs_file_system" "jenkins_efs" {
 resource "aws_efs_mount_target" "jenkins_efs" {
   security_groups = ["${aws_security_group.jenkins.id}"]
   file_system_id  = "${aws_efs_file_system.jenkins_efs.id}"
-  subnet_id       = "${element(${var.public_subnets}, 0)}"
+  subnet_id       = "${element(var.public_subnets, 0)}"
 }
