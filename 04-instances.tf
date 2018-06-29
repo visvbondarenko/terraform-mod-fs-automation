@@ -1,12 +1,12 @@
 # EC2 Instance(s)
-resource "aws_instance" "jenkins" {
-  count                   = "${var.instance_jenkins_count}"
-  ami                     = "${var.instance_base_image}"
-  instance_type           = "${var.instance_jenkins_type}"
-  availability_zone       = "${element(split(",", lookup(var.azs, var.region)), count.index)}"
-  subnet_id               = "${element(${var.public_subnets}, 0)}"
-  vpc_security_group_ids  = ["${aws_security_group.jenkins.id}", "${aws_security_group.tools.id}"]
-  disable_api_termination = true
+//resource "aws_instance" "jenkins" {
+//  count                   = "${var.instance_jenkins_count}"
+//  ami                     = "${var.instance_base_image}"
+//  instance_type           = "${var.instance_jenkins_type}"
+//  availability_zone       = "${element(split(",", lookup(var.azs, var.region)), count.index)}"
+//  subnet_id               = "${element(${var.public_subnets}, 0)}"
+//  vpc_security_group_ids  = ["${aws_security_group.jenkins.id}", "${aws_security_group.tools.id}"]
+//  disable_api_termination = true
 
 //  lifecycle {
 //    ignore_changes = ["ami"]
@@ -24,8 +24,8 @@ resource "aws_instance" "jenkins" {
 //    Owner       = ""
 //    Project     = ""
 //  }
-}
-
+//}
+//
 resource "aws_instance" "tools" {
   count                   = "${var.instance_tools_count}"
   ami                     = "${var.instance_base_image}"
