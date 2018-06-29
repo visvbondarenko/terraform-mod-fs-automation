@@ -20,8 +20,6 @@ variable "cidr_jenkins_ingress" {type = "list" default = []}
 variable "instance_jenkins_count"         {default = 1}
 variable "instance_jenkins_type"          {default = "t2.micro"}
 variable "instance_jenkins_ebs_optimized" {default = true}
-variable "instance_jenkins_private_ip"    {type = "map"}
-variable "instance_jenkins_sgs"           {type = "list" default = []}
 variable "subtype_jenkins"                {default = "jenkins"}
 variable "ebs_volume_jenkins_docker_size" {default = 30}
 
